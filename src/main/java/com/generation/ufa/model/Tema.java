@@ -10,7 +10,7 @@ import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "tb_temas")
-public class Ufa {
+public class Tema {
 	
 	
 	@Id
