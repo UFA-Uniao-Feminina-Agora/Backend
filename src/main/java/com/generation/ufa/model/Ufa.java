@@ -18,6 +18,8 @@ public class Ufa {
 	private Long id;
 	@NotNull(message = "O Atributo Descrição é obrigatório")
 	private String descricao_tema;
+	@NotNull(message = "O Atributo nome é obrigatório")
+	private String nome_tema;
 	
 	public Long getId() {
 		return this.id;
