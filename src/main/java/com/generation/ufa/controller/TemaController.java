@@ -37,14 +37,14 @@ public class TemaController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Tema> post(@Valid @RequestBody Tema nome_tema){
-		return ResponseEntity.status(HttpStatus.CREATED).body(temaRepository.save(nome_tema));
+	public ResponseEntity<Tema> post(@Valid @RequestBody Tema nome){
+		return ResponseEntity.status(HttpStatus.CREATED).body(temaRepository.save(nome));
 	}
 	
 	@PutMapping
-	public ResponseEntity<Tema> putById(@Valid @RequestBody Tema nome_tema){
-		return temaRepository.findById(nome_tema.getId())
-				.map(resposta -> ResponseEntity.ok(temaRepository.save(nome_tema)))
+	public ResponseEntity<Tema> putById(@Valid @RequestBody Tema nome){
+		return temaRepository.findById(nome.getId())
+				.map(resposta -> ResponseEntity.ok(temaRepository.save(nome)))
 				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 	}
 	

@@ -17,33 +17,29 @@ public class Tema {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@NotNull(message = "O Atributo Descrição é obrigatório")
-	private String descricao_tema;
+	private String descricao;
 	@NotNull(message = "O Atributo nome é obrigatório")
 	private String nome;
-	
 	public Long getId() {
-		return this.id;
+		return id;
 	}
-	
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
-	public String getDescricao_tema() {
-		return this.getDescricao_tema();
+	public String getDescricao() {
+		return descricao;
 	}
-
-	public void setDescricao_tema(String descricao_tema) {
-		this.descricao_tema = descricao_tema;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
-	
 	public String getNome() {
-		return this.getNome();
+		return nome;
 	}
-
 	public void setNome(String nome) {
-		this.getNome();
+		this.nome = nome;
 	}
 	
+	
+
 	
 }
