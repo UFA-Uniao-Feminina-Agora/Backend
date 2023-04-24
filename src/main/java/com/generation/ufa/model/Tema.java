@@ -19,7 +19,7 @@ public class Tema {
 	@NotNull(message = "O Atributo Descrição é obrigatório")
 	private String descricao_tema;
 	@NotNull(message = "O Atributo nome é obrigatório")
-	private String nome_tema;
+	private String nome;
 	
 	public Long getId() {
 		return this.id;
@@ -37,12 +37,12 @@ public class Tema {
 		this.descricao_tema = descricao_tema;
 	}
 	
-	public String getNome_tema() {
-		return this.getNome_tema();
+	public String getNome() {
+		return this.getNome();
 	}
 
-	public void setNome_tema(String nome_tema) {
-		this.getNome_tema();
+	public void setNome(String nome) {
+		this.getNome();
 	}
 	
 	

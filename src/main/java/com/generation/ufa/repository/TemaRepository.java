@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import com.generation.ufa.model.Tema;
 
 public interface TemaRepository extends JpaRepository <Tema, Long> {
-	public List <Tema>findAllByNome_temaContainingIgnoreCase (@Param ("nome_tema") String nome_tema);
+	public List <Tema>findAllByNomeContainingIgnoreCase (@Param ("nome") String nome);
 	
 	
 }
