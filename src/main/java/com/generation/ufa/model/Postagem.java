@@ -1,17 +1,20 @@
 package com.generation.ufa.model;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
-import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
@@ -39,11 +42,30 @@ public class Postagem {
 	@Size(min = 5, max = 1000, message = "Texto deve ter no minimo 05 e no máximo 1000 caracteres!")
 	private String texto;
 	
-	@UpdateTimestamp
-	private LocalDateTime data;
+	/*
+	 @DateTimeFormat(pattern="dd/MM/yyyy hh:mm")
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "data")
+	private Date date;
+	*/
 	
 	private String link;
-	
+
+	public Tema getTema() {
+		return tema;
+	}
+
+	public void setTema(Tema tema) {
+		this.tema = tema;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 
 	public Long getId() {
 		return id;
@@ -69,14 +91,14 @@ public class Postagem {
 		this.texto = texto;
 	}
 
-	public LocalDateTime getData() {
-		return data;
+	/*public Date getDate() {
+		return date;
 	}
 
-	public void setData(LocalDateTime data) {
-		this.data = data;
+	public void setDate(Date date) {
+		this.date = date;
 	}
-
+*/
 	public String getLink() {
 		return link;
 	}
@@ -84,25 +106,5 @@ public class Postagem {
 	public void setLink(String link) {
 		this.link = link;
 	}
-
-	// Get e Set de Tema
-	public Tema getTema() {
-		return tema;
-	}
-
-	public void setTema(Tema tema) {
-		this.tema = tema;
-	}
-
-	
-	// Get e Set de Usuario
-	public Usuario getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
-	
 	
 }

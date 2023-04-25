@@ -30,6 +30,12 @@ public class Tema {
 	private String descricao;
 	@NotNull(message = "O Atributo nome é obrigatório")
 	private String nome;
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -48,15 +54,5 @@ public class Tema {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	// Get e Set de Postagem
-	
-	public List<Postagem> getPostagem() {
-		return postagem;
-	}
-	public void setPostagem(List<Postagem> postagem) {
-		this.postagem = postagem;
-	}
-
 	
 }

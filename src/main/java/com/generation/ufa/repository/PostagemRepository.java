@@ -1,6 +1,6 @@
 package com.generation.ufa.repository;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,6 +12,8 @@ public interface PostagemRepository extends JpaRepository<Postagem, Long> {
 
 	List<Postagem>findAllByTituloContainingIgnoreCase(@Param("titulo")String titulo);
 
-	List<Postagem>findAllByData(LocalDateTime data);
+	//List<Postagem>findByData(Date data);
+		
+	
 	
 }
