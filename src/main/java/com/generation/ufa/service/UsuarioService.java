@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.generation.ufa.model.Usuario;
 import com.generation.ufa.model.UsuarioLogin;
+import com.generation.ufa.repository.UsuarioRepository;
 import com.generation.ufa.security.JwtService;
 
 
