@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.generation.ufa.model.Usuario;
 
-public class UserDetailsImpl implements UserDetails{
+public class UserDetailsImpl implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
 
@@ -61,5 +61,4 @@ public class UserDetailsImpl implements UserDetails{
 		return true;
 	}
 
-}	
-	
+}

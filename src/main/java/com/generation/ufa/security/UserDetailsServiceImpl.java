@@ -13,6 +13,7 @@ import org.springframework.web.server.ResponseStatusException;
 import com.generation.ufa.model.Usuario;
 import com.generation.ufa.repository.UsuarioRepository;
 
+@Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 	
 	@Autowired
@@ -30,5 +31,3 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 			
 	}
 }
-	
-
