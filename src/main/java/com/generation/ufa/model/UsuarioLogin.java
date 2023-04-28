@@ -1,13 +1,15 @@
 package com.generation.ufa.model;
 
 import jakarta.persistence.Column;
+import jakarta.validation.constraints.Email;
 
 public class UsuarioLogin {
 
 	private Long id;
 	
-	private String nome;
+	private String nomeUsuario;
 	
+	@Email
 	private String usuario;
 	
 	private String senha;
@@ -27,12 +29,12 @@ public class UsuarioLogin {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getNomeUsuario() {
+		return nomeUsuario;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeUsuario(String nomeUsuario) {
+		this.nomeUsuario = nomeUsuario;
 	}
 
 	public String getUsuario() {
@@ -74,7 +76,6 @@ public class UsuarioLogin {
 	public void setToken(String token) {
 		this.token = token;
 	}
-	
-	
+
 	
 }

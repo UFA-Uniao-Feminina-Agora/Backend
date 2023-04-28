@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.generation.ufa.model.Usuario;
 import com.generation.ufa.model.UsuarioLogin;
+import com.generation.ufa.security.JwtService;
 
 
 @Service
@@ -62,10 +63,12 @@ public class UsuarioService {
 			if (usuario.isPresent()) {
 				
 				usuarioLogin.get().setId(usuario.get().getId());
-				usuarioLogin.get().setNome(usuario.get().getNome());
+				usuarioLogin.get().setNomeUsuario(usuario.get().getNomeUsuario());
 				usuarioLogin.get().setFoto(usuario.get().getFoto());
 				usuarioLogin.get().setSenha("");
+				usuarioLogin.get().setTipoUsuario(usuario.get().getTipoUsuario());
 				usuarioLogin.get().setToken(gerarToken(usuarioLogin.get().getUsuario()));
+				
 				
 				return usuarioLogin;
 			}
